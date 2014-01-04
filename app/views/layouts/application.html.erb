@@ -9,7 +9,7 @@
 <body class="<%= controller.controller_name %>">
   <div id="banner">
     <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %>
+    <%= @page_title || "商品展示" %>
   </div>
   <div id="columns">
     <div id="side">
@@ -17,10 +17,8 @@
         <%= render(@cart) %>
       </div>
        <ul>
-         <li><a href="http://127.0.0.1:3000/">Home</a></li>
-         <li><a href="http://127.0.0.1:3000/">Questions</a></li>
-         <li><a href="http://127.0.0.1:3000/">News</a></li>
-         <li><a href="http://127.0.0.1:3000/">Contact</a></li>
+         <li><%= link_to("首頁", root_path) %></li>
+         <li><%= link_to("聯絡", root_path) %></li>
        </ul>
     </div>
      <div id="main">
