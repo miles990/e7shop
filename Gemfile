@@ -17,6 +17,12 @@ end
 # Twitter Bootstrap for Rails 3.x - 4 Asset Pipeline
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+# fix Can't get CSS working on Heroku using Rails 4 with bootstrap-saas gem
+group :production do
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
